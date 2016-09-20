@@ -8,7 +8,7 @@ using Calculator;
 
 namespace CalculatorTesting
 {
-    public class Class1
+    public class CalculatorTesting
     {
         Calculations calculations;
         [SetUp]
@@ -75,6 +75,11 @@ namespace CalculatorTesting
         public void TestDivTwoDifferentSigns()
         {
             Assert.AreEqual(-2, calculations.Calculate(-4, 2, Calculations.Operations.Divide));
+        }
+        [Test]
+        public void TestDivZero()
+        {
+            Assert.That(() => calculations.Calculate(4, 0, Calculations.Operations.Divide), Throws.InstanceOf<DivideByZeroException>());
         }
     }
 }
