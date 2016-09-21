@@ -73,9 +73,14 @@ namespace CalculatorTesting
             Assert.AreEqual(-2, calculations.Calculate(-4, 2, Calculations.Operations.Divide));
         }
         [Test]
-        public void TestDivZero()
+        public void TestDivZeroThrowsDivisionByZeroException()
         {
             Assert.That(() => calculations.Calculate(4, 0, Calculations.Operations.Divide), Throws.InstanceOf<DivideByZeroException>());
+        }
+        [Test]
+        public void TestWrongOperationThrowsArgumentException()
+        {
+            Assert.That(() => calculations.Calculate(4, 0, (Calculations.Operations)67), Throws.InstanceOf<ArgumentException>());
         }
     }
 }
