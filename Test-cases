@@ -1,3 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+проект тут https://github.com/alexisborovik/eBayTestAutomation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 А. Регистрация нового аккаунта (positive)
   1. Go to https://reg.ebay.com/reg/PartialReg
   2. Заполнить поле "Адрес электронной почты" (1testemail@mail.ru)
